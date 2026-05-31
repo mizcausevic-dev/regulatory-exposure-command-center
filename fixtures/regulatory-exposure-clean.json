@@ -1,0 +1,56 @@
+{
+  "snapshots": [
+    {
+      "id": "filings",
+      "name": "Filings",
+      "scope": "POLICY_LAYER",
+      "riskStatus": "HEALTHY",
+      "snapshotStatus": "CURRENT",
+      "reviewPath": "filings/current-quarter",
+      "owner": "Privacy operations",
+      "openObligationScore": 18,
+      "collectedAt": "2026-05-31T07:00:00Z"
+    },
+    {
+      "id": "records",
+      "name": "Records",
+      "scope": "CONTROL_LAYER",
+      "riskStatus": "HEALTHY",
+      "snapshotStatus": "CURRENT",
+      "reviewPath": "records/retention/final",
+      "owner": "Compliance engineering",
+      "openObligationScore": 20,
+      "collectedAt": "2026-05-31T07:00:00Z"
+    }
+  ],
+  "packets": [
+    {
+      "id": "REG-C1",
+      "snapshotId": "filings",
+      "resourcePath": "filing-pack",
+      "scope": "POLICY_LAYER",
+      "evidenceFamily": "FilingReadiness",
+      "status": "ADDED",
+      "expectedState": "reviewed filing packet",
+      "observedState": "reviewed filing packet",
+      "riskWindowHours": 8,
+      "impactedPrograms": 1,
+      "estimatedPenaltyUsd": 5000,
+      "blocksExecutiveReadiness": false
+    },
+    {
+      "id": "REG-C2",
+      "snapshotId": "records",
+      "resourcePath": "retention-proof-pack",
+      "scope": "CONTROL_LAYER",
+      "evidenceFamily": "RetentionControl",
+      "status": "ADDED",
+      "expectedState": "current retention evidence",
+      "observedState": "current retention evidence",
+      "riskWindowHours": 6,
+      "impactedPrograms": 1,
+      "estimatedPenaltyUsd": 4000,
+      "blocksExecutiveReadiness": false
+    }
+  ]
+}
